@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jonnathan Quintela - Portfólio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <div class="navbar__inner">
+        <a href="#inicio" class="navbar__logo">
+          Jonnathan <span>Quintela</span>
+        </a>
+
+        <ul class="navbar__links">
+          <li><a href="#inicio" class="navbar__link">Início</a></li>
+          <li><a href="#sobre" class="navbar__link">Experiência</a></li>
+          <li><a href="#objetivo" class="navbar__link">Objetivo</a></li>
+          <li><a href="#sobre-mim" class="navbar__link">Sobre Mim</a></li>
+          <li><a href="#formacao" class="navbar__link">Formação</a></li>
+          <li><a href="#habilidades" class="navbar__link">Habilidades</a></li>
+        </ul>
+
+        <a href="#habilidades" class="navbar__cta">
+          Ver Habilidades
+        </a>
+
+        <button class="navbar__hamburger" id="hamburger" aria-label="Abrir menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="navbar__mobile" id="mobile-menu">
+      <a href="#inicio" class="navbar__mobile-link">Início</a>
+      <a href="#sobre" class="navbar__mobile-link">Experiência</a>
+      <a href="#objetivo" class="navbar__mobile-link">Objetivo</a>
+      <a href="#sobre-mim" class="navbar__mobile-link">Sobre Mim</a>
+      <a href="#formacao" class="navbar__mobile-link">Formação</a>
+      <a href="#habilidades" class="navbar__mobile-link">Habilidades</a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="inicio" class="hero">
+      <div class="hero__inner scroll-animate">
+
+        <div class="animate">
+          <div class="hero__eyebrow">✦ Profissional de TI &amp; Administração</div>
+        </div>
+
+        <h1 class="hero__name animate animate--delay-1">
+          Jonnathan<br>
+          <span class="hero__name-highlight">Quintela</span>
+        </h1>
+
+        <p class="hero__subtitle animate animate--delay-2">
+          Administração · Engenharia da Computação
+        </p>
+
+        <p class="hero__description animate animate--delay-3">
+          Profissional com sólida experiência administrativa aliada a habilidades técnicas em
+          tecnologia. Organizado, proativo e sempre focado em otimizar processos e agregar
+          valor às atividades internas.
+        </p>
+
+        <div class="hero__actions animate animate--delay-4">
+          <button class="btn-primary" onclick="document.getElementById('habilidades').scrollIntoView({ behavior: 'smooth' })">
+            ⚡ Ver Habilidades
+          </button>
+          <button class="btn-outline" onclick="document.getElementById('formacao').scrollIntoView({ behavior: 'smooth' })">
+            🎓 Minha Formação
+          </button>
+        </div>
+
+        <div class="hero__stats animate animate--delay-5">
+          <div class="hero__stat">
+            <div class="hero__stat-value">28</div>
+            <div class="hero__stat-label">Anos</div>
+          </div>
+          <div class="hero__stat-sep"></div>
+          <div class="hero__stat">
+            <div class="hero__stat-value">6+</div>
+            <div class="hero__stat-label">Habilidades</div>
+          </div>
+          <div class="hero__stat-sep"></div>
+          <div class="hero__stat">
+            <div class="hero__stat-value">2026</div>
+            <div class="hero__stat-label">Formação</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="hero__scroll-hint" onclick="document.getElementById('sobre').scrollIntoView({ behavior: 'smooth' })" title="Rolar para baixo">
+        <div class="hero__scroll-dot"></div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section id="sobre" class="section experience">
+      <div class="container scroll-animate">
+        <div class="section-header animate">
+          <div class="section-badge">📋 Experiência</div>
+          <h2 class="section-title">Perfil Profissional</h2>
+          <span class="section-divider"></span>
+        </div>
+
+        <div class="experience__card animate animate--delay-2">
+          <p class="experience__text">
+            Profissional com sólida experiência na área administrativa, atuando no suporte a
+            rotinas organizacionais, <strong>controle e elaboração de documentos</strong>,
+            atendimento, <strong>elaboração de relatórios</strong> e apoio a 
+            <strong>setores financeiros</strong>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- OBJECTIVE SECTION -->
+    <section id="objetivo" class="section objective">
+      <div class="container scroll-animate">
+        <div class="section-header animate">
+          <div class="section-badge">🎯 Objetivo</div>
+          <h2 class="section-title">Objetivo Profissional</h2>
+          <span class="section-divider"></span>
+        </div>
+
+        <div class="objective__card animate animate--delay-2">
+          <p class="objective__text">
+            Desejo ter a oportunidade de me desenvolver profissionalmente, aplicando meus
+            conhecimentos e contribuindo para um ambiente de trabalho colaborativo. Isso não
+            só impulsionará o meu crescimento profissional, mas também reforça o meu
+            compromisso com os objetivos e o sucesso da empresa. Sou organizado, proativo e
+            com forte senso de responsabilidade — busco sempre otimizar processos e
+            contribuir para o bom desempenho das atividades internas.
+          </p>
+          <div class="objective__tags">
+            <span class="objective__tag">Organizado</span>
+            <span class="objective__tag">Proativo</span>
+            <span class="objective__tag">Responsável</span>
+            <span class="objective__tag">Colaborativo</span>
+            <span class="objective__tag">Focado em Resultados</span>
+            <span class="objective__tag">Comunicativo</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="sobre-mim" class="section about">
+      <div class="container scroll-animate">
+        <div class="section-header animate">
+          <div class="section-badge">👤 Sobre Mim</div>
+          <h2 class="section-title">Quem sou eu</h2>
+          <span class="section-divider"></span>
+        </div>
+
+        <div class="about__grid">
+          <div class="about__content animate animate--delay-1">
+            <p class="about__greeting">Olá! 👋</p>
+            <h3 class="about__headline">
+              Sou o <span>Jonnathan.</span>
+            </h3>
+            <p class="about__text">
+              Sou um profissional movido pela curiosidade e pela busca constante por novos
+              conhecimentos. Acredito que o aprendizado contínuo é a chave para a inovação,
+              e aplico esse entusiasmo em tudo o que desenvolvo.
+            </p>
+            <p class="about__text">
+              Fora do ambiente de trabalho, busco o equilíbrio praticando esportes e sou
+              um entusiasta do cinema, sempre em busca de boas histórias e novas perspectivas.
+            </p>
+
+            <div class="about__interests">
+              <div class="about__interest">
+                <span class="about__interest-icon">🏃</span>
+                <span>Esportes</span>
+              </div>
+              <div class="about__interest">
+                <span class="about__interest-icon">🎬</span>
+                <span>Cinema</span>
+              </div>
+              <div class="about__interest">
+                <span class="about__interest-icon">📚</span>
+                <span>Aprendizado</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about__photo-wrap animate animate--delay-2">
+            <div class="about__photo-blob"></div>
+            <div class="about__photo"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section id="formacao" class="section education">
+      <div class="container scroll-animate">
+        <div class="section-header animate">
+          <div class="section-badge">🏫 Formação</div>
+          <h2 class="section-title">Educação &amp; Formação</h2>
+          <span class="section-divider"></span>
+        </div>
+
+        <div class="education__grid">
+          <div class="education__card animate animate--delay-1">
+            <div class="education__icon">🎓</div>
+            <div class="education__type">Ensino Superior</div>
+            <h3 class="education__name">Faculdade IBMR</h3>
+            <p class="education__course">Engenharia da Computação</p>
+            <span class="education__year">📅 Conclusão prevista: Dezembro de 2026</span>
+          </div>
+          <div class="education__card animate animate--delay-2">
+            <div class="education__icon">💻</div>
+            <div class="education__type">Curso Livre</div>
+            <h3 class="education__name">JavaScript</h3>
+            <p class="education__course">Desenvolvimento Web</p>
+            <span class="education__year">📅 Conclusão em 2024</span>
+          </div>
+          <div class="education__card animate animate--delay-3">
+            <div class="education__icon">🖥️</div>
+            <div class="education__type">Curso Técnico</div>
+            <h3 class="education__name">Informática Profissional</h3>
+            <p class="education__course">Sistemas e Manutenção</p>
+            <span class="education__year">📅 Conclusão em 2016</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="habilidades" class="section skills">
+      <div class="container scroll-animate">
+        <div class="section-header animate">
+          <div class="section-badge">⚡ Habilidades</div>
+          <h2 class="section-title">Skills &amp; Competências</h2>
+          <span class="section-divider"></span>
+        </div>
+
+        <div class="skills__grid">
+          <div class="skill-card animate animate--delay-1">
+            <div class="skill-card__bg"></div>
+            <span class="skill-card__icon">🐍</span>
+            <div class="skill-card__name">Python</div>
+            <div class="skill-card__level">Intermediário</div>
+            <div class="skill-card__bar"><div class="skill-card__bar-fill" style="width: 65%"></div></div>
+          </div>
+          <div class="skill-card animate animate--delay-2">
+            <div class="skill-card__bg"></div>
+            <span class="skill-card__icon">📊</span>
+            <div class="skill-card__name">Pandas / Dados</div>
+            <div class="skill-card__level">Análise de Dados</div>
+            <div class="skill-card__bar"><div class="skill-card__bar-fill" style="width: 70%"></div></div>
+          </div>
+          <div class="skill-card animate animate--delay-3">
+            <div class="skill-card__bg"></div>
+            <span class="skill-card__icon">📋</span>
+            <div class="skill-card__name">Excel</div>
+            <div class="skill-card__level">Avançado</div>
+            <div class="skill-card__bar"><div class="skill-card__bar-fill" style="width: 82%"></div></div>
+          </div>
+          <div class="skill-card animate animate--delay-4">
+            <div class="skill-card__bg"></div>
+            <span class="skill-card__icon">🌐</span>
+            <div class="skill-card__name">JavaScript</div>
+            <div class="skill-card__level">Intermediário</div>
+            <div class="skill-card__bar"><div class="skill-card__bar-fill" style="width: 55%"></div></div>
+          </div>
+          <div class="skill-card animate animate--delay-5">
+            <div class="skill-card__bg"></div>
+            <span class="skill-card__icon">🔧</span>
+            <div class="skill-card__name">Manutenção HW</div>
+            <div class="skill-card__level">Avançado</div>
+            <div class="skill-card__bar"><div class="skill-card__bar-fill" style="width: 75%"></div></div>
+          </div>
+          <div class="skill-card animate animate--delay-6">
+            <div class="skill-card__bg"></div>
+            <span class="skill-card__icon">🤖</span>
+            <div class="skill-card__name">Inteligência Artificial</div>
+            <div class="skill-card__level">Intermediário</div>
+            <div class="skill-card__bar"><div class="skill-card__bar-fill" style="width: 50%"></div></div>
+          </div>
+          <div class="skill-card animate animate--delay-7">
+            <div class="skill-card__bg"></div>
+            <span class="skill-card__icon">🗣️</span>
+            <div class="skill-card__name">Inglês</div>
+            <div class="skill-card__level">Intermediário</div>
+            <div class="skill-card__bar"><div class="skill-card__bar-fill" style="width: 55%"></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div>
+          <div class="footer__brand">
+            Jonnathan <span>Quintela</span>
+          </div>
+          <p class="footer__tagline">Administração &amp; Tecnologia</p>
+        </div>
+
+        <ul class="footer__nav">
+          <li><a href="#inicio" class="footer__nav-link">Início</a></li>
+          <li><a href="#sobre" class="footer__nav-link">Sobre</a></li>
+          <li><a href="#objetivo" class="footer__nav-link">Objetivo</a></li>
+          <li><a href="#formacao" class="footer__nav-link">Formação</a></li>
+          <li><a href="#habilidades" class="footer__nav-link">Habilidades</a></li>
+        </ul>
+      </div>
+
+      <p class="footer__copy">
+        &copy; <span id="year"></span> Jonnathan Quintela. Todos os direitos reservados.
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
