@@ -1,333 +1,571 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-bs-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jonnathan Quintela - Portfólio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Portfólio de Jonnathan Quintela – Profissional de TI e Administração com experiência em tecnologia, análise de dados e gestão.">
+  <title>Jonnathan Quintela – Portfólio</title>
+
+  <!-- Bootstrap 5.3 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- AOS (Animate On Scroll) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+
+  <!-- Google Fonts: Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar" id="navbar">
+  <!-- ==============================
+       NAVBAR
+  ============================== -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNavbar">
     <div class="container">
-      <div class="navbar__inner">
-        <a href="#inicio" class="navbar__logo">
-          Jonnathan <span>Quintela</span>
-        </a>
+      <a class="navbar-brand fw-bold" href="#inicio">
+        Jonnathan <span class="text-electric">Quintela</span>
+      </a>
 
-        <ul class="navbar__links">
-          <li><a href="#inicio" class="navbar__link">Início</a></li>
-          <li><a href="#sobre" class="navbar__link">Experiência</a></li>
-          <li><a href="#objetivo" class="navbar__link">Objetivo</a></li>
-          <li><a href="#sobre-mim" class="navbar__link">Sobre Mim</a></li>
-          <li><a href="#formacao" class="navbar__link">Formação</a></li>
-          <li><a href="#habilidades" class="navbar__link">Habilidades</a></li>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+        aria-label="Abrir menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto gap-lg-1 align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="#sobre">Experiência</a></li>
+          <li class="nav-item"><a class="nav-link" href="#objetivo">Objetivo</a></li>
+          <li class="nav-item"><a class="nav-link" href="#sobre-mim">Sobre Mim</a></li>
+          <li class="nav-item"><a class="nav-link" href="#formacao">Formação</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projetos">Projetos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#habilidades">Habilidades</a></li>
         </ul>
-
-        <a href="#habilidades" class="navbar__cta">
-          Ver Habilidades
-        </a>
-
-        <button class="navbar__hamburger" id="hamburger" aria-label="Abrir menu">
-          <span></span><span></span><span></span>
-        </button>
+        <a href="#habilidades" class="btn btn-electric ms-lg-3 mt-3 mt-lg-0">Ver Habilidades</a>
       </div>
-    </div>
-
-    <div class="navbar__mobile" id="mobile-menu">
-      <a href="#inicio" class="navbar__mobile-link">Início</a>
-      <a href="#sobre" class="navbar__mobile-link">Experiência</a>
-      <a href="#objetivo" class="navbar__mobile-link">Objetivo</a>
-      <a href="#sobre-mim" class="navbar__mobile-link">Sobre Mim</a>
-      <a href="#formacao" class="navbar__mobile-link">Formação</a>
-      <a href="#habilidades" class="navbar__mobile-link">Habilidades</a>
     </div>
   </nav>
 
   <main>
-    <!-- HERO SECTION -->
-    <section id="inicio" class="hero">
-      <div class="hero__inner scroll-animate">
 
-        <div class="animate">
-          <div class="hero__eyebrow">✦ Profissional de TI &amp; Administração</div>
-        </div>
-
-        <h1 class="hero__name animate animate--delay-1">
-          Jonnathan<br>
-          <span class="hero__name-highlight">Quintela</span>
-        </h1>
-
-        <p class="hero__subtitle animate animate--delay-2">
-          Administração · Engenharia da Computação
-        </p>
-
-        <p class="hero__description animate animate--delay-3">
-          Profissional com sólida experiência administrativa aliada a habilidades técnicas em
-          tecnologia. Organizado, proativo e sempre focado em otimizar processos e agregar
-          valor às atividades internas.
-        </p>
-
-        <div class="hero__actions animate animate--delay-4">
-          <button class="btn-primary" onclick="document.getElementById('habilidades').scrollIntoView({ behavior: 'smooth' })">
-            ⚡ Ver Habilidades
-          </button>
-          <button class="btn-outline" onclick="document.getElementById('formacao').scrollIntoView({ behavior: 'smooth' })">
-            🎓 Minha Formação
-          </button>
-        </div>
-
-        <div class="hero__stats animate animate--delay-5">
-          <div class="hero__stat">
-            <div class="hero__stat-value">28</div>
-            <div class="hero__stat-label">Anos</div>
-          </div>
-          <div class="hero__stat-sep"></div>
-          <div class="hero__stat">
-            <div class="hero__stat-value">6+</div>
-            <div class="hero__stat-label">Habilidades</div>
-          </div>
-          <div class="hero__stat-sep"></div>
-          <div class="hero__stat">
-            <div class="hero__stat-value">2026</div>
-            <div class="hero__stat-label">Formação</div>
-          </div>
-        </div>
-
+    <!-- ==============================
+         HERO SECTION
+    ============================== -->
+    <section id="inicio" class="hero-section d-flex align-items-center min-vh-100">
+      <!-- Animated background particles -->
+      <div class="hero-particles" aria-hidden="true">
+        <div class="particle"></div><div class="particle"></div><div class="particle"></div>
+        <div class="particle"></div><div class="particle"></div><div class="particle"></div>
+        <div class="particle"></div><div class="particle"></div>
       </div>
 
-      <div class="hero__scroll-hint" onclick="document.getElementById('sobre').scrollIntoView({ behavior: 'smooth' })" title="Rolar para baixo">
-        <div class="hero__scroll-dot"></div>
-      </div>
-    </section>
+      <div class="container position-relative z-1">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-9 col-xl-8">
 
-    <!-- EXPERIENCE SECTION -->
-    <section id="sobre" class="section experience">
-      <div class="container scroll-animate">
-        <div class="section-header animate">
-          <div class="section-badge">📋 Experiência</div>
-          <h2 class="section-title">Perfil Profissional</h2>
-          <span class="section-divider"></span>
-        </div>
+            <div class="hero-eyebrow mb-3" data-aos="fade-down" data-aos-delay="100">
+              <span class="badge rounded-pill badge-electric px-4 py-2 fs-6">
+                ✦ Profissional de TI &amp; Administração
+              </span>
+            </div>
 
-        <div class="experience__card animate animate--delay-2">
-          <p class="experience__text">
-            Profissional com sólida experiência na área administrativa, atuando no suporte a
-            rotinas organizacionais, <strong>controle e elaboração de documentos</strong>,
-            atendimento, <strong>elaboração de relatórios</strong> e apoio a 
-            <strong>setores financeiros</strong>.
-          </p>
-        </div>
-      </div>
-    </section>
+            <h1 class="hero-name display-1 fw-black mb-3" data-aos="fade-up" data-aos-delay="200">
+              Jonnathan<br>
+              <span class="gradient-text">Quintela</span>
+            </h1>
 
-    <!-- OBJECTIVE SECTION -->
-    <section id="objetivo" class="section objective">
-      <div class="container scroll-animate">
-        <div class="section-header animate">
-          <div class="section-badge">🎯 Objetivo</div>
-          <h2 class="section-title">Objetivo Profissional</h2>
-          <span class="section-divider"></span>
-        </div>
+            <p class="hero-subtitle fs-5 text-muted mb-3" data-aos="fade-up" data-aos-delay="300">
+              Administração · Engenharia da Computação
+            </p>
 
-        <div class="objective__card animate animate--delay-2">
-          <p class="objective__text">
-            Desejo ter a oportunidade de me desenvolver profissionalmente, aplicando meus
-            conhecimentos e contribuindo para um ambiente de trabalho colaborativo. Isso não
-            só impulsionará o meu crescimento profissional, mas também reforça o meu
-            compromisso com os objetivos e o sucesso da empresa. Sou organizado, proativo e
-            com forte senso de responsabilidade — busco sempre otimizar processos e
-            contribuir para o bom desempenho das atividades internas.
-          </p>
-          <div class="objective__tags">
-            <span class="objective__tag">Organizado</span>
-            <span class="objective__tag">Proativo</span>
-            <span class="objective__tag">Responsável</span>
-            <span class="objective__tag">Colaborativo</span>
-            <span class="objective__tag">Focado em Resultados</span>
-            <span class="objective__tag">Comunicativo</span>
+            <p class="hero-description lead text-secondary mb-5 mx-auto" style="max-width: 600px;"
+              data-aos="fade-up" data-aos-delay="400">
+              Profissional com sólida experiência administrativa aliada a habilidades técnicas em
+              tecnologia. Organizado, proativo e sempre focado em otimizar processos e agregar
+              valor às atividades internas.
+            </p>
+
+            <div class="d-flex flex-wrap gap-3 justify-content-center mb-5"
+              data-aos="fade-up" data-aos-delay="500">
+              <button id="btn-habilidades" class="btn btn-electric btn-lg px-5 btn-pulse">
+                <i class="bi bi-lightning-fill me-2"></i>Ver Habilidades
+              </button>
+              <button id="btn-formacao" class="btn btn-outline-electric btn-lg px-5">
+                <i class="bi bi-mortarboard-fill me-2"></i>Minha Formação
+              </button>
+            </div>
+
+            <!-- Stats Row -->
+            <div class="row g-4 justify-content-center" data-aos="fade-up" data-aos-delay="600">
+              <div class="col-auto">
+                <div class="hero-stat text-center px-4 py-3">
+                  <div class="hero-stat-value text-electric fw-black fs-1">28</div>
+                  <div class="hero-stat-label text-muted small text-uppercase ls-2">Anos</div>
+                </div>
+              </div>
+              <div class="col-auto d-none d-sm-block">
+                <div class="hero-stat-sep"></div>
+              </div>
+              <div class="col-auto">
+                <div class="hero-stat text-center px-4 py-3">
+                  <div class="hero-stat-value text-electric fw-black fs-1">7+</div>
+                  <div class="hero-stat-label text-muted small text-uppercase ls-2">Habilidades</div>
+                </div>
+              </div>
+              <div class="col-auto d-none d-sm-block">
+                <div class="hero-stat-sep"></div>
+              </div>
+              <div class="col-auto">
+                <div class="hero-stat text-center px-4 py-3">
+                  <div class="hero-stat-value text-electric fw-black fs-1">2026</div>
+                  <div class="hero-stat-label text-muted small text-uppercase ls-2">Formação</div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
+      </div>
+
+      <!-- Scroll Hint -->
+      <div class="scroll-hint" id="scrollHint" role="button" aria-label="Rolar para baixo">
+        <div class="scroll-dot"></div>
       </div>
     </section>
 
-    <!-- ABOUT SECTION -->
-    <section id="sobre-mim" class="section about">
-      <div class="container scroll-animate">
-        <div class="section-header animate">
-          <div class="section-badge">👤 Sobre Mim</div>
-          <h2 class="section-title">Quem sou eu</h2>
-          <span class="section-divider"></span>
+    <!-- ==============================
+         EXPERIENCE SECTION
+    ============================== -->
+    <section id="sobre" class="py-section">
+      <div class="container">
+        <div class="section-header text-center mb-5" data-aos="fade-up">
+          <span class="section-badge">📋 Experiência</span>
+          <h2 class="section-title mt-2">Perfil Profissional</h2>
+          <div class="section-divider mx-auto"></div>
         </div>
 
-        <div class="about__grid">
-          <div class="about__content animate animate--delay-1">
-            <p class="about__greeting">Olá! 👋</p>
-            <h3 class="about__headline">
-              Sou o <span>Jonnathan.</span>
+        <div class="row justify-content-center">
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="150">
+            <div class="content-card p-4 p-md-5">
+              <p class="fs-5 text-secondary lh-lg mb-0">
+                Profissional com sólida experiência na área administrativa, atuando no suporte a
+                rotinas organizacionais, <strong class="text-white">controle e elaboração de documentos</strong>,
+                atendimento, <strong class="text-white">elaboração de relatórios</strong> e apoio a
+                <strong class="text-white">setores financeiros</strong>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================
+         OBJECTIVE SECTION
+    ============================== -->
+    <section id="objetivo" class="py-section section-alt">
+      <div class="container">
+        <div class="section-header text-center mb-5" data-aos="fade-up">
+          <span class="section-badge">🎯 Objetivo</span>
+          <h2 class="section-title mt-2">Objetivo Profissional</h2>
+          <div class="section-divider mx-auto"></div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-9" data-aos="fade-up" data-aos-delay="150">
+            <div class="content-card p-4 p-md-5">
+              <p class="fs-5 text-secondary lh-lg mb-4">
+                Desejo ter a oportunidade de me desenvolver profissionalmente, aplicando meus
+                conhecimentos e contribuindo para um ambiente de trabalho colaborativo. Isso não
+                só impulsionará o meu crescimento profissional, mas também reforça o meu
+                compromisso com os objetivos e o sucesso da empresa. Sou organizado, proativo e
+                com forte senso de responsabilidade — busco sempre otimizar processos e
+                contribuir para o bom desempenho das atividades internas.
+              </p>
+              <div class="d-flex flex-wrap gap-2">
+                <span class="objective-tag">Organizado</span>
+                <span class="objective-tag">Proativo</span>
+                <span class="objective-tag">Responsável</span>
+                <span class="objective-tag">Colaborativo</span>
+                <span class="objective-tag">Focado em Resultados</span>
+                <span class="objective-tag">Comunicativo</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================
+         ABOUT SECTION
+    ============================== -->
+    <section id="sobre-mim" class="py-section position-relative overflow-hidden">
+      <!-- Particles Background -->
+      <div id="particles-js" class="position-absolute w-100 h-100 top-0 start-0 z-0"></div>
+      
+      <!-- Astronaut Background -->
+      <img src="astronauta.png" alt="" class="astronaut-bg position-absolute z-0" aria-hidden="true">
+
+      <div class="container position-relative z-1">
+        <div class="section-header text-center mb-5" data-aos="fade-up">
+          <span class="section-badge">👤 Sobre Mim</span>
+          <h2 class="section-title mt-2">Quem sou eu</h2>
+          <div class="section-divider mx-auto"></div>
+        </div>
+
+        <div class="row align-items-center g-5">
+          <!-- Content -->
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+            <p class="about-greeting fw-semibold mb-2">Olá! 👋</p>
+            <h3 class="about-headline fw-black mb-4">
+              Sou o <span class="gradient-text">Jonnathan.</span>
             </h3>
-            <p class="about__text">
+            <p class="text-secondary lh-lg mb-3">
               Sou um profissional movido pela curiosidade e pela busca constante por novos
               conhecimentos. Acredito que o aprendizado contínuo é a chave para a inovação,
               e aplico esse entusiasmo em tudo o que desenvolvo.
             </p>
-            <p class="about__text">
+            <p class="text-secondary lh-lg mb-4">
               Fora do ambiente de trabalho, busco o equilíbrio praticando esportes e sou
               um entusiasta do cinema, sempre em busca de boas histórias e novas perspectivas.
             </p>
 
-            <div class="about__interests">
-              <div class="about__interest">
-                <span class="about__interest-icon">🏃</span>
+            <div class="d-flex gap-3 flex-wrap">
+              <div class="interest-chip">
+                <span class="interest-icon">🏃</span>
                 <span>Esportes</span>
               </div>
-              <div class="about__interest">
-                <span class="about__interest-icon">🎬</span>
+              <div class="interest-chip">
+                <span class="interest-icon">🎬</span>
                 <span>Cinema</span>
               </div>
-              <div class="about__interest">
-                <span class="about__interest-icon">📚</span>
+              <div class="interest-chip">
+                <span class="interest-icon">📚</span>
                 <span>Aprendizado</span>
               </div>
             </div>
           </div>
 
-          <div class="about__photo-wrap animate animate--delay-2">
-            <div class="about__photo-blob"></div>
-            <div class="about__photo"></div>
+          <!-- Photo -->
+          <div class="col-lg-6 text-center" data-aos="fade-left" data-aos-delay="200">
+            <div class="about-photo-wrap mx-auto">
+              <div class="about-photo-blob" aria-hidden="true"></div>
+              <img src="foto-perfil.png" alt="Foto de Jonnathan Quintela" class="about-photo img-fluid">
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- EDUCATION SECTION -->
-    <section id="formacao" class="section education">
-      <div class="container scroll-animate">
-        <div class="section-header animate">
-          <div class="section-badge">🏫 Formação</div>
-          <h2 class="section-title">Educação &amp; Formação</h2>
-          <span class="section-divider"></span>
+    <!-- ==============================
+         EDUCATION SECTION
+    ============================== -->
+    <section id="formacao" class="py-section section-alt">
+      <div class="container">
+        <div class="section-header text-center mb-5" data-aos="fade-up">
+          <span class="section-badge">🏫 Formação</span>
+          <h2 class="section-title mt-2">Educação &amp; Formação</h2>
+          <div class="section-divider mx-auto"></div>
         </div>
 
-        <div class="education__grid">
-          <div class="education__card animate animate--delay-1">
-            <div class="education__icon">🎓</div>
-            <div class="education__type">Ensino Superior</div>
-            <h3 class="education__name">Faculdade IBMR</h3>
-            <p class="education__course">Engenharia da Computação</p>
-            <span class="education__year">📅 Conclusão prevista: Dezembro de 2026</span>
+        <div class="row g-4 justify-content-center">
+          <!-- Card 1 -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="edu-card h-100 p-4 text-center">
+              <div class="edu-icon mb-3">🎓</div>
+              <div class="edu-type text-electric small fw-semibold mb-1 text-uppercase ls-2">Ensino Superior</div>
+              <h3 class="edu-name h5 fw-bold mb-1">Faculdade IBMR</h3>
+              <p class="text-secondary mb-3">Engenharia da Computação</p>
+              <span class="edu-year">
+                <i class="bi bi-calendar3 me-1"></i>Conclusão: Dez 2026
+              </span>
+            </div>
           </div>
-          <div class="education__card animate animate--delay-2">
-            <div class="education__icon">💻</div>
-            <div class="education__type">Curso Livre</div>
-            <h3 class="education__name">JavaScript</h3>
-            <p class="education__course">Desenvolvimento Web</p>
-            <span class="education__year">📅 Conclusão em 2024</span>
+
+          <!-- Card 2 -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="edu-card h-100 p-4 text-center">
+              <div class="edu-icon mb-3">💻</div>
+              <div class="edu-type text-electric small fw-semibold mb-1 text-uppercase ls-2">Curso Livre</div>
+              <h3 class="edu-name h5 fw-bold mb-1">JavaScript</h3>
+              <p class="text-secondary mb-3">Desenvolvimento Web</p>
+              <span class="edu-year">
+                <i class="bi bi-calendar3 me-1"></i>Conclusão em 2024
+              </span>
+            </div>
           </div>
-          <div class="education__card animate animate--delay-3">
-            <div class="education__icon">🖥️</div>
-            <div class="education__type">Curso Técnico</div>
-            <h3 class="education__name">Informática Profissional</h3>
-            <p class="education__course">Sistemas e Manutenção</p>
-            <span class="education__year">📅 Conclusão em 2016</span>
+
+          <!-- Card 3 -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="edu-card h-100 p-4 text-center">
+              <div class="edu-icon mb-3">🖥️</div>
+              <div class="edu-type text-electric small fw-semibold mb-1 text-uppercase ls-2">Curso Técnico</div>
+              <h3 class="edu-name h5 fw-bold mb-1">Informática Profissional</h3>
+              <p class="text-secondary mb-3">Sistemas e Manutenção</p>
+              <span class="edu-year">
+                <i class="bi bi-calendar3 me-1"></i>Conclusão em 2016
+              </span>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SKILLS SECTION -->
-    <section id="habilidades" class="section skills">
-      <div class="container scroll-animate">
-        <div class="section-header animate">
-          <div class="section-badge">⚡ Habilidades</div>
-          <h2 class="section-title">Skills &amp; Competências</h2>
-          <span class="section-divider"></span>
+    <!-- ==============================
+         PROJETOS SECTION
+    ============================== -->
+    <section id="projetos" class="py-section position-relative overflow-hidden mb-5">
+      <!-- Particles Background -->
+      <div id="particles-js-projetos" class="position-absolute w-100 h-100 top-0 start-0 z-0"></div>
+      
+      <!-- Astronaut Background Left -->
+      <img src="astronauta.png" alt="Astronauta flutuando" class="astronaut-bg-left position-absolute z-0" aria-hidden="true">
+
+      <div class="container position-relative z-1">
+        <div class="section-header text-center mb-5" data-aos="fade-up">
+          <span class="section-badge">💻 Portfólio</span>
+          <h2 class="section-title mt-2">Meus Projetos</h2>
+          <div class="section-divider mx-auto"></div>
         </div>
 
-        <div class="skills__grid">
-          <div class="skill-card animate animate--delay-1">
-            <div class="skill-card__bg"></div>
-            <span class="skill-card__icon">🐍</span>
-            <div class="skill-card__name">Python</div>
-            <div class="skill-card__level">Intermediário</div>
-            <div class="skill-card__bar"><div class="skill-card__bar-fill" style="width: 65%"></div></div>
+        <div class="row pt-4">
+          <div class="col-12">
+            
+            <div class="projects-flex-carousel" data-aos="fade-up" data-aos-delay="200">
+              
+              <!-- Card 1 -->
+              <div class="project-card">
+                <div class="project-image-wrapper">
+                  <img src="carroceldayana.png" class="project-image" alt="Dayana Aguiar">
+                </div>
+                <div class="project-info">
+                  <div class="project-meta">
+                    <span>12 Jan 2024, Web, UI</span>
+                    <span class="meta-icons"><i class="bi bi-person"></i> 1 <i class="bi bi-window-sidebar"></i> 1</span>
+                  </div>
+                  <h3 class="project-title">Dayana Aguiar Landing Page</h3>
+                  <a href="https://jonnathanc2n.github.io/lpdayanaaguiar/" target="_blank" rel="noopener noreferrer" class="project-price-link text-electric mt-1 d-inline-block">
+                    Acessar Projeto <i class="bi bi-arrow-right ms-1"></i>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Card 2 -->
+              <div class="project-card">
+                <div class="project-image-wrapper">
+                  <img src="carrocelcrematorio.png" class="project-image" alt="Crematório Eterna Patinha">
+                </div>
+                <div class="project-info">
+                  <div class="project-meta">
+                    <span>05 Mar 2024, Web, UX</span>
+                    <span class="meta-icons"><i class="bi bi-person"></i> 1 <i class="bi bi-window-sidebar"></i> 3</span>
+                  </div>
+                  <h3 class="project-title">Crematório Eterna Patinha</h3>
+                  <a href="https://jonnathanc2n.github.io/crematoriopet/" target="_blank" rel="noopener noreferrer" class="project-price-link text-electric mt-1 d-inline-block">
+                    Acessar Projeto <i class="bi bi-arrow-right ms-1"></i>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Card 3 -->
+              <div class="project-card">
+                <div class="project-image-wrapper bg-card d-flex align-items-center justify-content-center" style="height: 100%;">
+                  <i class="bi bi-code-slash text-electric" style="font-size: 3rem; opacity: 0.8;"></i>
+                </div>
+                <div class="project-info">
+                  <div class="project-meta">
+                    <span>Em Andamento, Estudos</span>
+                    <span class="meta-icons"><i class="bi bi-clock"></i> ? <i class="bi bi-window"></i> ?</span>
+                  </div>
+                  <h3 class="project-title">Desenvolvendo conhecimentos</h3>
+                  <span class="project-price-link text-secondary mt-1 d-inline-block">
+                    Novidades em breve
+                  </span>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Dots -->
+            <div class="d-flex justify-content-center mt-3 gap-2">
+              <span class="d-inline-block rounded-circle bg-electric" style="width: 8px; height: 8px;"></span>
+              <span class="d-inline-block rounded-circle bg-secondary" style="width: 8px; height: 8px; opacity: 0.4;"></span>
+              <span class="d-inline-block rounded-circle bg-secondary" style="width: 8px; height: 8px; opacity: 0.4;"></span>
+            </div>
+
           </div>
-          <div class="skill-card animate animate--delay-2">
-            <div class="skill-card__bg"></div>
-            <span class="skill-card__icon">📊</span>
-            <div class="skill-card__name">Pandas / Dados</div>
-            <div class="skill-card__level">Análise de Dados</div>
-            <div class="skill-card__bar"><div class="skill-card__bar-fill" style="width: 70%"></div></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==============================
+         SKILLS SECTION
+    ============================== -->
+    <section id="habilidades" class="py-section">
+      <div class="container">
+        <div class="section-header text-center mb-5" data-aos="fade-up">
+          <span class="section-badge">⚡ Habilidades</span>
+          <h2 class="section-title mt-2">Skills &amp; Competências</h2>
+          <div class="section-divider mx-auto"></div>
+        </div>
+
+        <div class="row g-4">
+
+          <!-- Skill Card: Python -->
+          <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="skill-card p-4">
+              <div class="skill-icon mb-3">🐍</div>
+              <div class="d-flex justify-content-between align-items-center mb-1">
+                <span class="skill-name fw-semibold">Python</span>
+                <span class="skill-level">Intermediário</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-bar-fill" data-width="65"></div>
+              </div>
+            </div>
           </div>
-          <div class="skill-card animate animate--delay-3">
-            <div class="skill-card__bg"></div>
-            <span class="skill-card__icon">📋</span>
-            <div class="skill-card__name">Excel</div>
-            <div class="skill-card__level">Avançado</div>
-            <div class="skill-card__bar"><div class="skill-card__bar-fill" style="width: 82%"></div></div>
+
+          <!-- Skill Card: Pandas -->
+          <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="150">
+            <div class="skill-card p-4">
+              <div class="skill-icon mb-3">📊</div>
+              <div class="d-flex justify-content-between align-items-center mb-1">
+                <span class="skill-name fw-semibold">Pandas / Dados</span>
+                <span class="skill-level">Análise de Dados</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-bar-fill" data-width="70"></div>
+              </div>
+            </div>
           </div>
-          <div class="skill-card animate animate--delay-4">
-            <div class="skill-card__bg"></div>
-            <span class="skill-card__icon">🌐</span>
-            <div class="skill-card__name">JavaScript</div>
-            <div class="skill-card__level">Intermediário</div>
-            <div class="skill-card__bar"><div class="skill-card__bar-fill" style="width: 55%"></div></div>
+
+          <!-- Skill Card: Excel -->
+          <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="skill-card p-4">
+              <div class="skill-icon mb-3">📋</div>
+              <div class="d-flex justify-content-between align-items-center mb-1">
+                <span class="skill-name fw-semibold">Excel</span>
+                <span class="skill-level">Avançado</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-bar-fill" data-width="82"></div>
+              </div>
+            </div>
           </div>
-          <div class="skill-card animate animate--delay-5">
-            <div class="skill-card__bg"></div>
-            <span class="skill-card__icon">🔧</span>
-            <div class="skill-card__name">Manutenção HW</div>
-            <div class="skill-card__level">Avançado</div>
-            <div class="skill-card__bar"><div class="skill-card__bar-fill" style="width: 75%"></div></div>
+
+          <!-- Skill Card: JavaScript -->
+          <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="250">
+            <div class="skill-card p-4">
+              <div class="skill-icon mb-3">🌐</div>
+              <div class="d-flex justify-content-between align-items-center mb-1">
+                <span class="skill-name fw-semibold">JavaScript</span>
+                <span class="skill-level">Intermediário</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-bar-fill" data-width="55"></div>
+              </div>
+            </div>
           </div>
-          <div class="skill-card animate animate--delay-6">
-            <div class="skill-card__bg"></div>
-            <span class="skill-card__icon">🤖</span>
-            <div class="skill-card__name">Inteligência Artificial</div>
-            <div class="skill-card__level">Intermediário</div>
-            <div class="skill-card__bar"><div class="skill-card__bar-fill" style="width: 50%"></div></div>
+
+          <!-- Skill Card: Hardware -->
+          <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="skill-card p-4">
+              <div class="skill-icon mb-3">🔧</div>
+              <div class="d-flex justify-content-between align-items-center mb-1">
+                <span class="skill-name fw-semibold">Manutenção HW</span>
+                <span class="skill-level">Avançado</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-bar-fill" data-width="75"></div>
+              </div>
+            </div>
           </div>
-          <div class="skill-card animate animate--delay-7">
-            <div class="skill-card__bg"></div>
-            <span class="skill-card__icon">🗣️</span>
-            <div class="skill-card__name">Inglês</div>
-            <div class="skill-card__level">Intermediário</div>
-            <div class="skill-card__bar"><div class="skill-card__bar-fill" style="width: 55%"></div></div>
+
+          <!-- Skill Card: IA -->
+          <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="350">
+            <div class="skill-card p-4">
+              <div class="skill-icon mb-3">🤖</div>
+              <div class="d-flex justify-content-between align-items-center mb-1">
+                <span class="skill-name fw-semibold">Inteligência Artificial</span>
+                <span class="skill-level">Intermediário</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-bar-fill" data-width="50"></div>
+              </div>
+            </div>
           </div>
+
+          <!-- Skill Card: Inglês -->
+          <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="skill-card p-4">
+              <div class="skill-icon mb-3">🗣️</div>
+              <div class="d-flex justify-content-between align-items-center mb-1">
+                <span class="skill-name fw-semibold">Inglês</span>
+                <span class="skill-level">Intermediário</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-bar-fill" data-width="55"></div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
+
   </main>
 
-  <footer class="footer">
+  <!-- ==============================
+       FOOTER
+  ============================== -->
+  <footer class="site-footer py-5">
     <div class="container">
-      <div class="footer__inner">
-        <div>
-          <div class="footer__brand">
-            Jonnathan <span>Quintela</span>
+      <div class="row align-items-center gy-4">
+
+        <div class="col-md-4 text-center text-md-start">
+          <div class="footer-brand fw-bold fs-5 mb-1">
+            Jonnathan <span class="text-electric">Quintela</span>
           </div>
-          <p class="footer__tagline">Administração &amp; Tecnologia</p>
+          <p class="text-muted small mb-0">Administração &amp; Tecnologia</p>
         </div>
 
-        <ul class="footer__nav">
-          <li><a href="#inicio" class="footer__nav-link">Início</a></li>
-          <li><a href="#sobre" class="footer__nav-link">Sobre</a></li>
-          <li><a href="#objetivo" class="footer__nav-link">Objetivo</a></li>
-          <li><a href="#formacao" class="footer__nav-link">Formação</a></li>
-          <li><a href="#habilidades" class="footer__nav-link">Habilidades</a></li>
-        </ul>
-      </div>
+        <div class="col-md-4 text-center">
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item"><a href="#inicio" class="footer-link">Início</a></li>
+            <li class="list-inline-item"><a href="#sobre" class="footer-link">Experiência</a></li>
+            <li class="list-inline-item"><a href="#objetivo" class="footer-link">Objetivo</a></li>
+            <li class="list-inline-item"><a href="#formacao" class="footer-link">Formação</a></li>
+            <li class="list-inline-item"><a href="#projetos" class="footer-link">Projetos</a></li>
+            <li class="list-inline-item"><a href="#habilidades" class="footer-link">Habilidades</a></li>
+          </ul>
+        </div>
 
-      <p class="footer__copy">
-        &copy; <span id="year"></span> Jonnathan Quintela. Todos os direitos reservados.
-      </p>
+        <div class="col-md-4 text-center text-md-end">
+          <p class="text-muted small mb-0">
+            &copy; <span id="year"></span> Jonnathan Quintela. Todos os direitos reservados.
+          </p>
+        </div>
+
+      </div>
     </div>
   </footer>
 
+  <!-- Bootstrap 5 JS Bundle (no jQuery) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <!-- Particles JS -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <!-- Custom Script -->
   <script src="script.js"></script>
 </body>
 </html>
