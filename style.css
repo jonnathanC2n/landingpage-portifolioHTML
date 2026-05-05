@@ -31,6 +31,41 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 72px;
+  height: 200vh;
+}
+
+/* ========================
+   STAR BACKGROUND (Space Effect)
+======================= */
+#star-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: twinkle var(--duration, 3s) infinite ease-in-out;
+  will-change: transform, opacity;
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
 }
 
 body {
@@ -65,6 +100,7 @@ body {
   border-bottom: 1px solid rgba(37, 99, 235, 0.12);
   padding: 0.85rem 0;
   transition: background var(--transition), box-shadow var(--transition);
+  z-index: 9999;
 }
 
 #mainNavbar.scrolled {
@@ -463,87 +499,140 @@ body {
 }
 
 /* ========================
-   FOOTER
-======================== */
-.site-footer {
-  background: var(--bg-alt);
-  border-top: 1px solid rgba(37, 99, 235, 0.12);
+   CONTATO SECTION
+======================= */
+.contact-links {
+  gap: 1rem;
 }
 
-.footer-brand { letter-spacing: -0.02em; }
-
-.footer-link {
+.contact-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-card);
   color: var(--text-muted);
-  text-decoration: none;
-  font-size: 0.85rem;
+  transition: all var(--transition);
+  cursor: default;
+}
+
+.contact-item:hover {
+  border-color: var(--electric);
+  color: var(--text-primary);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-blue);
+}
+
+.contact-item a:hover {
+  color: var(--text-primary);
+}
+
+.contact-icon {
+  font-size: 1.5rem;
+  color: var(--electric-light);
+}
+
+#emailContainer {
+  cursor: default;
+}
+
+.copy-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 0;
+  margin-left: 0.25rem;
   transition: color var(--transition);
 }
 
-.footer-link:hover { color: var(--electric-light); }
-
-/* ========================
-   RESPONSIVE TWEAKS
-======================== */
-@media (max-width: 991.98px) {
-  .about-photo-wrap { width: 260px; height: 260px; }
-}
-
-@media (max-width: 767.98px) {
-  .py-section { padding-top: 3.5rem; padding-bottom: 3.5rem; }
-  .hero-section { padding-top: 5rem; }
-  .about-photo-wrap { width: 220px; height: 220px; margin-top: 2rem; }
+.copy-btn:hover {
+  color: var(--electric-light);
 }
 
 /* ========================
-   SCROLLBAR
-======================== */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--bg-alt); }
-::-webkit-scrollbar-thumb {
-  background: var(--electric-dark);
-  border-radius: 9999px;
-}
-::-webkit-scrollbar-thumb:hover { background: var(--electric); }
-
-/* ========================
-   SELECTION
-======================== */
-::selection {
-  background: rgba(37, 99, 235, 0.35);
-  color: #fff;
+   FOOTER
+======================= */
+.portfolio-swiper {
+  width: 100%;
+  padding: 1rem 0 3rem 0;
 }
 
+.portfolio-swiper .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 320px;
+  height: 380px;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.portfolio-swiper .swiper-slide .project-card {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+}
+
+.portfolio-swiper .swiper-slide-shadow-left {
+  background-image: linear-gradient(to left, #000, transparent);
+}
+
+.portfolio-swiper .swiper-slide-shadow-right {
+  background-image: linear-gradient(to right, #000, transparent);
+}
+
+.portfolio-swiper .swiper-pagination-bullet {
+  background: var(--text-muted);
+  opacity: 0.5;
+  width: 8px;
+  height: 8px;
+  transition: all 0.3s ease;
+}
+
+.portfolio-swiper .swiper-pagination-bullet-active {
+  background: var(--electric);
+  opacity: 1;
+  width: 24px;
+  border-radius: 4px;
+}
+
+.portfolio-swiper .swiper-pagination {
+  position: relative;
+  margin-top: 1rem;
+}
+
+.portfolio-swiper .empty-card {
+  opacity: 0.6;
+  border: 1px dashed rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.portfolio-swiper .empty-card:hover {
+  opacity: 0.8;
+  border: 1px dashed var(--electric);
+}
+
 /* ========================
-   PARTICLES & ASTRONAUT BACKGROUND
-======================== */
-#particles-js,
-#particles-js-projetos {
+   ASTRONAUT BACKGROUND
+======================= */
+.astronaut-bg,
+.astronaut-bg-left {
+  width: 200px;
+  max-width: 30vw;
   opacity: 0.7;
+  animation: floatingAstro 6s ease-in-out infinite;
   pointer-events: none;
+  filter: drop-shadow(0 0 20px rgba(37, 99, 235, 0.2));
 }
 
 .astronaut-bg {
   right: 5%;
   top: 50%;
   transform: translateY(-50%);
-  width: 350px;
-  max-width: 45vw;
-  opacity: 0.85;
-  animation: floatingAstro 6s ease-in-out infinite;
-  pointer-events: none;
-  filter: drop-shadow(0 0 20px rgba(37, 99, 235, 0.2));
 }
 
 .astronaut-bg-left {
   left: 5%;
   top: 50%;
   transform: translateY(-50%) scaleX(-1);
-  width: 380px;
-  max-width: 45vw;
-  opacity: 0.85;
-  animation: floatingAstroLeft 6s ease-in-out infinite;
-  pointer-events: none;
-  filter: drop-shadow(0 0 20px rgba(37, 99, 235, 0.2));
 }
 
 @keyframes floatingAstro {
@@ -551,17 +640,26 @@ body {
   50%      { transform: translateY(-55%) rotate(3deg); }
 }
 
-@keyframes floatingAstroLeft {
-  0%, 100% { transform: translateY(-50%) scaleX(-1) rotate(0deg); }
-  50%      { transform: translateY(-55%) scaleX(-1) rotate(-3deg); }
+@media (max-width: 991.98px) {
+  .astronaut-bg,
+  .astronaut-bg-left {
+    width: 150px;
+    right: -30px;
+    opacity: 0.5;
+  }
+  .astronaut-bg-left {
+    left: -30px;
+    transform: translateY(-50%) scaleX(-1);
+  }
 }
 
-/* ========================
-   CAROUSEL & PORTFOLIO
-======================== */
-/* ========================
-   CAROUSEL & PORTFOLIO FLEX
-======================== */
+@media (max-width: 767.98px) {
+  .astronaut-bg,
+  .astronaut-bg-left {
+    display: none;
+  }
+}
+
 .projects-flex-carousel {
   display: flex;
   gap: 1.5rem;
@@ -606,7 +704,6 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
 }
 
 .project-info {

@@ -1,11 +1,66 @@
 /**
  * script.js — Portfolio Jonnathan Quintela
- * Bootstrap 5 + AOS + Vanilla JS (sem jQuery)
+ * Bootstrap 5.3 + AOS + Vanilla JS (sem jQuery)
  */
 
 /* ========================
-   AOS Init
+   Star Background Animation (Native Scroll)
 ======================== */
+(function () {
+  const container = document.getElementById('star-container');
+  if (!container) return;
+
+  container.innerHTML = '';
+
+  const count = 80;
+  const stars = [];
+
+  for (let i = 0; i < count; i++) {
+    const s = document.createElement('div');
+    s.className = 'star';
+
+    const x = Math.random() * 100;
+    const y = Math.random() * 100;
+
+    const isStatic = Math.random() < 0.3;
+    const z = isStatic ? 0 : 0.2 + Math.random() * 0.6;
+    const size = isStatic ? 1 + Math.random() : 1 + Math.random() * 2;
+
+    s.style.left = x + '%';
+    s.style.top = y + '%';
+    s.style.width = size + 'px';
+    s.style.height = size + 'px';
+    s.style.setProperty('--duration', (2 + Math.random() * 4) + 's');
+
+    container.appendChild(s);
+    stars.push({ el: s, initialY: y, speed: z });
+  }
+
+  let lastScrollY = 0;
+  let velocity = 0;
+
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    velocity = scrollY - lastScrollY;
+    lastScrollY = scrollY;
+
+    const stretch = Math.max(1, Math.min(1 + Math.abs(velocity) * 0.15, 4));
+
+    stars.forEach(star => {
+      if (star.speed === 0) {
+        star.el.style.transform = 'scaleY(1)';
+        return;
+      }
+
+      let pos = (star.initialY - (scrollY * star.speed * 0.05)) % 100;
+      if (pos < 0) pos += 100;
+
+      star.el.style.top = pos + '%';
+      star.el.style.transform = `scaleY(${stretch})`;
+    });
+  }, { passive: true });
+})();
+
 AOS.init({
   duration: 700,
   easing: 'ease-out-cubic',
@@ -103,7 +158,7 @@ document.querySelectorAll('#navbarNav .nav-link, #navbarNav .btn-electric').forE
 
 /* ========================
    Particles.js Init
-======================== */
+ ======================== */
 if (typeof particlesJS !== 'undefined') {
   const particlesConfig = {
     "particles": {
@@ -154,4 +209,59 @@ if (typeof particlesJS !== 'undefined') {
   if (document.getElementById('particles-js-projetos')) {
     particlesJS("particles-js-projetos", particlesConfig);
   }
+}
+
+/* ========================
+   Swiper Portfolio Carousel (Coverflow Effect)
+ ======================== */
+const portfolioSwiperEl = document.querySelector('.portfolio-swiper');
+if (portfolioSwiperEl && typeof Swiper !== 'undefined') {
+  const portfolioSwiper = new Swiper('.portfolio-swiper', {
+    effect: 'coverflow',
+    loop: true,
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 1,
+    coverflowEffect: {
+      rotate: 8,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows: true
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    },
+    breakpoints: {
+      576: {
+        slidesPerView: 1.5
+      },
+      768: {
+        slidesPerView: 2
+      },
+      992: {
+        slidesPerView: 2.5
+      },
+      1200: {
+        slidesPerView: 3
+      }
+    }
+  });
+}
+
+/* ========================
+   Copy Email to Clipboard
+======================= */
+function copyEmail() {
+  const email = 'jt.quintela2@gmail.com';
+  navigator.clipboard.writeText(email).then(() => {
+    const btn = document.querySelector('.copy-btn i');
+    btn.classList.remove('bi-clipboard');
+    btn.classList.add('bi-check2');
+    setTimeout(() => {
+      btn.classList.remove('bi-check2');
+      btn.classList.add('bi-clipboard');
+    }, 2000);
+  });
 }
